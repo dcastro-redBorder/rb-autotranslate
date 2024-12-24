@@ -99,7 +99,7 @@ def translateFile(file1, file2, missing_in_dict, targetLanguage):
 def translate_text_deepl(text, target_language):
     url = "https://api-free.deepl.com/v2/translate"
     params = {
-        "auth_key": "41d01e22-bfc8-433f-a0b3-df78b7bdfe6c:fx",
+        "auth_key": "INSERT YOUR API KEY",
         "text": text,
         "target_lang": target_language.upper()
     }
@@ -136,5 +136,5 @@ def main(file1, file2):
 if __name__ == "__main__":
     #CHANGE THESE TO YOUR FILES PATHS
     file1Path = 'en.yml'
-    file2Path = 'fr.yml'
+    file2Path = 'zh.yml'
     main(file1Path, file2Path)

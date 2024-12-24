@@ -1,0 +1,66 @@
+# Redborder YAML Translation Tool
+
+This project provides a script for comparing and translating Redborder YAML files while ensuring hierarchical structures are preserved and merged correctly. It is designed to handle nested dictionaries and integrate with the DeepL API for language translation.
+
+---
+
+## Features
+
+1. **Compare Keys Between YAML Files**:
+   - Identifies keys missing in one file compared to another bidirectionally.
+
+2. **DeepL Integration**:
+   - Translates missing keys using the DeepL API.
+
+3. **Hierarchical Structure Preservation**:
+   - Converts flat, dotted keys into nested YAML structures.
+
+4. **Merge Dictionaries**:
+   - Combines new translations with existing data, avoiding duplicates.
+
+---
+
+## Requirements
+
+- Python 3.x
+- Libraries:
+  - `pyyaml`
+  - `requests`
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/yaml-translation-tool.git
+   cd yaml-translation-tool
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   pip install pyyaml requests
+   ```
+
+---
+
+## Usage
+
+1. **Prepare Your YAML Files**:
+   - Place the script in the same directory as your .yaml files or edit the script file paths to match the path to your .yaml files.
+
+2. **Run the Script**:
+   ```bash
+   python yamlComparer.py
+   ```
+
+3. **Translation Workflow**:
+   - The script will:
+     1. Load the two YAML files.
+     2. Compare the keys between them.
+     3. Prompt you to translate missing keys.
+     4. Write the updated translations back into the target YAML file.
+
+## License
+
+This project is licensed under the MIT License.
