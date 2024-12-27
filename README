@@ -42,6 +42,10 @@ This project provides a script for comparing and translating Redborder YAML file
    pip install pyyaml requests
    ```
 
+3. Paste your api key in the line 102 of the yamlComparer.py script:
+   ```bash
+   "auth_key": "INSERT YOUR API KEY"
+   ```
 ---
 
 ## Usage
