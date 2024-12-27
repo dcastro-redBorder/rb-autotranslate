@@ -136,5 +136,5 @@ def main(file1, file2):
 if __name__ == "__main__":
     #CHANGE THESE TO YOUR FILES PATHS
     file1Path = 'en.yml'
-    file2Path = 'fr.yml'
+    file2Path = 'es.yml'
     main(file1Path, file2Path)
