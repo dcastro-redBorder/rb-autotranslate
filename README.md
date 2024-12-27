@@ -4,28 +4,14 @@ This project provides a script for comparing and translating Redborder YAML file
 
 ---
 
-## Features
-
-1. **Compare Keys Between YAML Files**:
-   - Identifies keys missing in one file compared to another bidirectionally.
-
-2. **DeepL Integration**:
-   - Translates missing keys using the DeepL API.
-
-3. **Hierarchical Structure Preservation**:
-   - Converts flat, dotted keys into nested YAML structures.
-
-4. **Merge Dictionaries**:
-   - Combines new translations with existing data, avoiding duplicates.
-
----
-
 ## Requirements
 
 - Python 3.x
+- Pip
 - Libraries:
   - `pyyaml`
   - `requests`
+- DeepL API key
 
 ---
 
@@ -42,7 +28,7 @@ This project provides a script for comparing and translating Redborder YAML file
    pip install pyyaml requests
    ```
 
-3. Paste your api key in the line 102 of the yamlComparer.py script:
+3. Register in DeepL and paste your API key in the line 102 of the yamlComparer.py script:
    ```bash
    "auth_key": "INSERT YOUR API KEY"
    ```
@@ -52,13 +38,20 @@ This project provides a script for comparing and translating Redborder YAML file
 
 1. **Prepare Your YAML Files**:
    - Place the script in the same directory as your .yaml files or edit the script file paths to match the path to your .yaml files.
+  
+2. **Select both languages**:
+   - In the line 138 and 139 of the script you can change the languages you want to translate from and to.
+   ```python
+    file1Path = 'en.yml'
+    file2Path = 'es.yml'
+   ```
 
-2. **Run the Script**:
+4. **Run the Script**:
    ```bash
    python yamlComparer.py
    ```
 
-3. **Translation Workflow**:
+5. **Translation Workflow**:
    - The script will:
      1. Load the two YAML files.
      2. Compare the keys between them.
